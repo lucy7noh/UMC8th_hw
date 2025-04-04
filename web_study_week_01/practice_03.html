@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Animation 실습</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: coral;
+      margin: 100px auto;
+      animation: slide 2s ease-in-out 1s infinite alternate forwards;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+        background-color: coral;
+      }
+      100% {
+        transform: translateX(200px);
+        background-color: lightgreen;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">애니메이션 실습</h2>
+  <div class="box"></div>
+</body>
+</html>
