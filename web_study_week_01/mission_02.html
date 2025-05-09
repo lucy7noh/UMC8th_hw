@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex & Grid Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      width: 100%;
+    }
+
+    .header div {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+    }
+
+    .header .left {
+      background-color: #2D3E50;
+    }
+
+    .header .right {
+      background-color: #D9534F;
+    }
+
+    .hero {
+      background-color: #5B84C4;
+      text-align: center;
+      padding: 80px;
+      font-size: 18px;
+      color: white;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      padding: 0;
+      margin: 0;
+    }
+
+    .main-box {
+      flex: 0 0 45%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .main {
+      background-color: #1C2B3A;
+      color: white;
+      font-size: 18px;
+      padding: 40px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .side-box {
+      flex: 0 0 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .image {
+      background-color: #CFE2E8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 40px;
+      height: 50%;
+    }
+
+    .extra {
+      background-color: #76A88F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      padding: 40px;
+      height: 50%;
+    }
+
+    .banner {
+      background-color: #F4D27A;
+      text-align: center;
+      padding: 25px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="left">HEADER</div>
+      <div class="right">MENU</div>
+    </div>
+    <div class="hero">HERO</div>
+
+    <div class="content">
+      <div class="main-box">
+        <div class="main">MAIN</div>
+      </div>
+      <div class="side-box">
+        <div class="image">IMAGE</div>
+        <div class="extra">EXTRA</div>
+      </div>
+    </div>
+
+    <div class="banner">BANNER</div>
+  </div>
+</body>
+</html>
