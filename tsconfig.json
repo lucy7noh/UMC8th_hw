@@ -1,4 +1,11 @@
 {
+<<<<<<< HEAD
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+=======
   "compilerOptions": {
     "module": "commonjs",
     "declaration": true,
@@ -18,4 +25,5 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false
   }
+>>>>>>> 8765e688c7ebb28db0f53466b6034a0d52a61db5
 }
