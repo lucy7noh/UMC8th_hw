@@ -1,11 +1,12 @@
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from "./pages/HomePage.tsx";
+import MyPage from './pages/MyPage.tsx';
+
 import NotFoundPage from './pages/NotFoundPage.tsx';
 import LoginPage from './pages/LoginPage.tsx';
 import HomeLayout from './layouts/HomeLayout.tsx';
 import SignupPage from './pages/SignupPage.tsx';
-import MyPage from './pages/MyPage.tsx';
 
 
 //1. 홈페이지
@@ -21,7 +22,7 @@ const router = createBrowserRouter( [
       {index: true, element: <HomePage />},
       {path: 'login', element: <LoginPage />},
       {path: 'signup', element: <SignupPage />},
-      {path: 'my', element: <MyPage />},
+      {path: 'mypage', element: <MyPage />},
 
 
     ]

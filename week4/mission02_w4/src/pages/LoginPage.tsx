@@ -14,22 +14,29 @@ const LoginPage = () => {
     validate: validateSignin,
   });
 
-  const handleSubmit = async() => {
-        const response = await postSignup(values);
-
-        try {
-            const response = await postSignin(values);
-            localStorage.setItem("accessTocken", response.data.accessTocken);
-
-        } catch(error) {
-            alert(error?.message);
-        }
-
-
-        console.log(response);
-    
+  const handleSubmit = async () => {
+    try {
+      // 로그인 요청
+      const response = await postSignin(values);
+  
+      // 백엔드 응답 구조가 { accessToken: string }인지 확인
+      const accessToken = response.accessToken || response.data?.accessToken;
+      if (!accessToken) {
+        throw new Error("토큰이 존재하지 않습니다.");
+      }
+  
+      // 토큰 저장
+      localStorage.setItem("accessToken", accessToken);
+  
+      console.log("로그인 성공", response);
+  
+      // ✅ 마이페이지로 이동
+      navigate("/mypage");
+    } catch (error: any) {
+      console.error("로그인 오류", error);
+      alert(error?.message || "로그인에 실패했습니다.");
+    }
   };
-
   const isDisabled =
     Object.values(errors || {}).some((error) => error.length > 0) ||
     Object.values(values).some((value) => value === "");
